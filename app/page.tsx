@@ -33,7 +33,7 @@ const perks = [
 
 export default function Home() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-x-clip">
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[36rem] w-[60rem] -translate-x-1/2 rounded-full bg-secondary/40 blur-3xl" />
       <div className="pointer-events-none absolute top-96 -right-40 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
 
