@@ -6,16 +6,20 @@ import { Input } from "@/components/ui/input";
 
 const products = [
   {
-    name: "Jumbo Butter Stick Squishy",
+    name: "Jumbo Butter Stick Squishy – 9.5\"",
+    image: "https://static.wixstatic.com/media/809dad_e81d45f28ce349589a50d1defc58cc07~mv2.jpg",
+    alt: "Jumbo butter stick squishy, 9.5 inch slow-rising toy",
     description: "Extra-large, super soft and slow rising. Our signature desk squishy.",
     price: "$13.99",
     tag: "Best seller",
     gradient: "from-secondary via-accent to-card",
   },
   {
-    name: "Strawberry Butter Stick Squishy",
-    description: "Strawberry-scented butter stick with a deeply satisfying squish.",
-    price: "$13.99",
+    name: "Strawberry Butter Stick Squishy – 5.2\"",
+    image: "https://static.wixstatic.com/media/809dad_6dbe77abefe84676b8dc037a30453aac~mv2.jpg",
+    alt: "Strawberry butter stick squishy, 5.2 inch slow-rising toy",
+    description: "Pocket-size pink butter stick with a strawberry on top. Squeeze it flat and watch it slowly rise.",
+    price: "$9.99",
     tag: "Premium favorite",
     gradient: "from-[#f6b3b8] via-accent to-card",
   },
@@ -84,7 +88,7 @@ export default function Home() {
           <div className="relative mx-auto aspect-square w-full max-w-md">
             <div className="from-secondary via-accent to-card absolute inset-0 rotate-3 rounded-[3rem] bg-gradient-to-br shadow-2xl" />
             <div className="bg-card/80 border-border absolute inset-6 -rotate-3 rounded-[2.5rem] border p-8 shadow-xl backdrop-blur">
-              <Image src="/logo.png" alt="" width={400} height={400} className="h-full w-full object-contain" />
+              <Image src={products[0].image} alt={products[0].alt} width={600} height={400} className="h-full w-full rounded-3xl object-cover" priority />
             </div>
           </div>
         </section>
@@ -121,11 +125,11 @@ export default function Home() {
                     {p.tag}
                   </span>
                   <Image
-                    src="/logo.png"
-                    alt=""
-                    width={160}
-                    height={160}
-                    className="h-32 w-32 object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6"
+                    src={p.image}
+                    alt={p.alt}
+                    width={600}
+                    height={400}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="space-y-4 p-7">
